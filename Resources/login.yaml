@@ -1,0 +1,4 @@
+input_email: //input[@id="email"]          
+input_password: //input[@id="passwd"]            
+login_button:   //i[@class="icon-lock left"]
+logo: //i[@class="icon-building"]

@@ -1,0 +1,3 @@
+create_email: //input[@id="email_create"]                      
+create_button:   //i[@class="icon-user left"]
+first_name: //input[@id="customer_firstname"]
