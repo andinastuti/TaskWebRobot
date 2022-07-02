@@ -1,0 +1,6 @@
+subject : //select[@id="id_contact"]
+input_email : //input[@id="email"]
+button_send : //button[@id="submitMessage"]
+massage: //button[@id="submitMessage"]
+success : //p[@class="alert alert-success"]
+not_success : //div[@class="alert alert-danger"]

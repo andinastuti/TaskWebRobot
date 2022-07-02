@@ -1,42 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220626 22:28:43.389" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220702 23:54:36.233" rpa="false" schemaversion="3">
 <suite id="s1" name="Order" source="D:\QA\TaskWebRobot\Steps\Order.robot">
-<test id="s1-t1" name="I order one product" line="11">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>${base_url}</arg>
-<arg>${browser_setup}</arg>
+<test id="s1-t1" name="User Should Be Able to order product" line="7">
+<kw name="Open Browser Chrome" library="Order" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>url=${ORDER_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220626 22:28:43.613" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220626 22:28:43.613" endtime="20220626 22:28:54.443"/>
+<msg timestamp="20220702 23:54:36.453" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php?id_product=3&amp;controller=product'.</msg>
+<status status="PASS" starttime="20220702 23:54:36.453" endtime="20220702 23:54:43.199"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220626 22:28:54.444" endtime="20220626 22:28:54.566"/>
+<status status="PASS" starttime="20220702 23:54:36.453" endtime="20220702 23:54:43.199"/>
 </kw>
+<kw name="Verify Current Url Is Contact Url" library="Order">
+<doc>Verify current url is order url</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ORDER_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220702 23:54:43.209" level="INFO">Current location is 'http://automationpractice.com/index.php?id_product=3&amp;controller=product'.</msg>
+<status status="PASS" starttime="20220702 23:54:43.200" endtime="20220702 23:54:43.209"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220702 23:54:48.221" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220702 23:54:43.209" endtime="20220702 23:54:48.221"/>
+</kw>
+<status status="PASS" starttime="20220702 23:54:43.200" endtime="20220702 23:54:48.221"/>
+</kw>
+<kw name="Klik Add to cart" library="Order">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[contains(@href,'href="http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=1&amp;token=62836caa40f1beb6f0025f04f067953d"')]</arg>
+<arg>${add_blue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220626 22:28:54.566" level="INFO">Clicking element '//a[contains(@href,'href="http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=1&amp;token=62836caa40f1beb6f0025f04f067953d"')]'.</msg>
-<msg timestamp="20220626 22:28:55.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220626 22:28:55.193" level="FAIL">Element with locator '//a[contains(@href,'href="http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=1&amp;token=62836caa40f1beb6f0025f04f067953d"')]' not found.</msg>
-<status status="FAIL" starttime="20220626 22:28:54.566" endtime="20220626 22:28:55.204"/>
+<msg timestamp="20220702 23:54:48.225" level="INFO">Clicking element '(//button[@type="submit"])[3]'.</msg>
+<status status="PASS" starttime="20220702 23:54:48.221" endtime="20220702 23:54:48.302"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220702 23:54:53.320" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220702 23:54:48.302" endtime="20220702 23:54:53.320"/>
+</kw>
+<status status="PASS" starttime="20220702 23:54:48.221" endtime="20220702 23:54:53.320"/>
+</kw>
+<kw name="Success add to shopping cart" library="Order">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${add_green}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220702 23:54:53.361" level="INFO">Element '//*[@class="btn btn-default button button-medium"]' is displayed.</msg>
+<status status="PASS" starttime="20220702 23:54:53.322" endtime="20220702 23:54:53.361"/>
+</kw>
+<status status="PASS" starttime="20220702 23:54:53.320" endtime="20220702 23:54:53.361"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220626 22:28:55.204" endtime="20220626 22:28:57.414"/>
+<status status="PASS" starttime="20220702 23:54:53.361" endtime="20220702 23:54:55.552"/>
 </kw>
-<status status="FAIL" starttime="20220626 22:28:43.613" endtime="20220626 22:28:57.414">Element with locator '//a[contains(@href,'href="http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=1&amp;token=62836caa40f1beb6f0025f04f067953d"')]' not found.</status>
+<doc>Test to verify that user should be able to order product</doc>
+<status status="PASS" starttime="20220702 23:54:36.453" endtime="20220702 23:54:55.552"/>
 </test>
-<status status="FAIL" starttime="20220626 22:28:43.398" endtime="20220626 22:28:57.418"/>
+<doc>Order test cases</doc>
+<status status="PASS" starttime="20220702 23:54:36.243" endtime="20220702 23:54:55.553"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Order">Order</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Order">Order</stat>
 </suite>
 </statistics>
 <errors>

@@ -9,7 +9,7 @@ ${browser_setup}                        Chrome
 
 
 *** Test Cases ***
-I click 1
+I click Order History And Details
     Maximize Browser Window
     Input Text                          //input[@id="email"]                         andhjb@gmail.com
     Input Text                          //input[@id="passwd"]                        12345
@@ -19,7 +19,7 @@ I click 1
     Click Element                       //i[@class="icon-list-ol"]
     Element Should Be Visible           //div[@id="block-history"]
 
-I click 2
+I click My Credit Slips
     Maximize Browser Window
     Input Text                          //input[@id="email"]                         andhjb@gmail.com
     Input Text                          //input[@id="passwd"]                        12345
@@ -29,7 +29,7 @@ I click 2
     Click Element                       //i[@class="icon-ban-circle"]
     Element Should Be Visible           //div[@id="block-history"]
 
-I click 3
+I click My Address
     Maximize Browser Window
     Input Text                          //input[@id="email"]                         andhjb@gmail.com
     Input Text                          //input[@id="passwd"]                        12345
@@ -39,7 +39,7 @@ I click 3
     Click Element                       //i[@class="icon-building"]
     Element Should Be Visible           //div[@class="bloc_adresses row"]
 
-I click 4
+I click My Personal Information
     Maximize Browser Window
     Input Text                          //input[@id="email"]                         andhjb@gmail.com
     Input Text                          //input[@id="passwd"]                        12345
@@ -49,7 +49,7 @@ I click 4
     Click Element                       //i[@class="icon-user"]
     Element Should Be Visible           //input[@id="firstname"]
 
-I click 5
+I click My Wishlist
     Maximize Browser Window
     Input Text                          //input[@id="email"]                         andhjb@gmail.com
     Input Text                          //input[@id="passwd"]                        12345

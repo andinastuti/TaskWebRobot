@@ -1,7 +1,0 @@
-click_credit : //i[@class="icon-ban-circle"]
-info_credit : //p[@class="info-title"]
-click_order : //i[@class="icon-list-ol"]
-info_order : //i[@class="icon-building"]
-click_user : //i[@class="icon-user"]
-info_user : //p[@class="info-title"]
-click_whist : //i[@class="icon-heart"]

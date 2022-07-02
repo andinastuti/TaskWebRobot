@@ -1,40 +1,29 @@
 *** Settings ***
-Library                                 SeleniumLibrary
-Test Setup                              Open Browser                ${base_url}         ${browser_setup}
-Test Teardown                           Close Browser
-
-*** Variables ***
-${base_url}                             http://automationpractice.com/index.php
-${browser_setup}                        Chrome
-
+Documentation                   Home test cases
+Library                         SeleniumLibrary
+Resource                        ../pageObjects/Home.robot
 
 *** Test Cases ***
-I searching product
-    Maximize Browser Window
-    Input Text                          //input[@id="search_query_top"]                         Dress
-    Click Element                       //button[@type="submit"]
-    Sleep                               2s
-    Element Should Be Visible           //img[@class="replace-2x img-responsive"]
+User Should Be Able to Search Product 
+    [Documentation]             Test to verify that User Should Be Able to Search Product 
+    [Setup]                     Open Browser Chrome                      
 
-I click "Call Us"
-    Maximize Browser Window
-    Click Element                       //a[@class="btn btn-default"]
-    Sleep                               2s
-    Element Should Be Visible           //div[@class="dt-fancy-title bg-on"]
+    Input product to search
+    Click search button
 
-I input valid email at newsletter
-    Maximize Browser Window
-    Input Text                          //input[@id="newsletter-input"]                         andhjb@gmail.com
-    Click Element                       //button[@name="submitNewsletter"]
-    Sleep                               2s
-#    Element Should Be Visible           //p[@class="alert alert-success"]
+    [Teardown]                  Close Browser
 
 
-I input invalid email at newsletter
-    Maximize Browser Window
-    Input Text                          //input[@id="newsletter-input"]                         andhjb@gmail
-    Click Element                       //button[@name="submitNewsletter"]
-    Sleep                               2s
-    Element Should Be Visible           //p[@class="alert alert-danger"]
+User click button "Call Us" 
+    [Documentation]             Test to verify that User click button "Call Us" 
+    [Setup]                     Open Browser Chrome 
+
+    I click button "Call Us"
+    info appear
+    [Teardown]                  Close Browser
+
+    
+
+
 
 

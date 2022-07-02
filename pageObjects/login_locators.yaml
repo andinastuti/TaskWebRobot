@@ -1,0 +1,8 @@
+input_email: //input[@id="email"]          
+input_password: //input[@id="passwd"]            
+login_button:   //i[@class="icon-lock left"]
+logo: //i[@class="icon-building"]
+alert : (//*[@class="alert alert-danger"])[1]
+forgot_password : //*[@class="lost_password form-group"]
+retrieve : (//*[@class="btn btn-default button button-medium"])[2]
+notif_success : //*[@class="alert alert-success"]
