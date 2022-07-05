@@ -39,3 +39,7 @@ Klik retrieve password
 Success sent to email address
     Element Should Be Visible           ${notif_success}
 
+Not Success sent to email address
+    Element Should Be Visible           ${alert_forgot_password}
+
+

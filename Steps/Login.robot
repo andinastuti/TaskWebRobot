@@ -40,13 +40,15 @@ User Login with valid email and invalid password
 
     [Teardown]                              Close Browser
 
-User forgot password
-    [Documentation]                         Test to verify that User Login with valid email and invalid password
+User forgot password with valid email
+    [Documentation]                         Test to verify that User forgot password with valid email
     [Setup]                                 Open Browser Chrome
 
     Klik Forgot Password
-    input email                             email=mahyaandina@gmail.com
+    input email                             email=mahyaandina1@gmail.com
     Klik retrieve password
     Success sent to email address
 
     [Teardown]                              Close Browser
+
+

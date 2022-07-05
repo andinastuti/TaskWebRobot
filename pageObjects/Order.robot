@@ -20,7 +20,37 @@ Klik Add to cart
 
 Success add to shopping cart
     Element Should Be Visible           ${add_green}
-    # Sleep                               2s
+
+Klik checkout
+    Click Element                       ${checkout}
+
+Summary page is appear
+    Element Should Be Visible           ${summary_page}
+    sleep                               5s
+
+Click Checkout Summary
+    Click Element                       ${checkout_summary}
+
+Sign in page is appear
+    Element Should Be Visible           ${signin_page}
+    sleep                               5s
+
+Input Email
+    Input Text                          ${email}                    andhjb@gmail.com
+
+Input Password
+    Input Text                          ${password}                 12345
+
+Klik Sign in 
+    Click Element                       ${sign_in}
+    sleep                               5s
+
+Address page is appear
+    Element Should Be Visible           ${address_page}
+    sleep                               10s
+
+Click Checkout Address
+    Click Element                       ${checkout_address}
 
 
     
