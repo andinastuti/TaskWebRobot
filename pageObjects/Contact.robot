@@ -14,14 +14,20 @@ Verify Current Url Is Contact Url
     Location Should Be                  ${CONTACT_URL}
 
 Choose Subject heading
-    Select From List By Index           ${subject}                   1
+    Select From List By Index           ${subject}             1
 
 input email
     [Arguments]                         ${email}                
     Input Text                          ${input_email}         ${email}
 
+Input Order reference
+    input Text                          ${order_reference}     8
+
+Attach file
+    Choose File                         ${image}               D:\QA\TaskWebRobot\image\dress1.jpeg
+
 input massage
-    Input Text                          ${massage}              I complain to this product
+    Input Text                          ${massage}             I complain to this product
 
 Click send
     Click Element                       ${button_send}              
@@ -33,6 +39,8 @@ Success send email
 Not success send email
     Element Should Be Visible           ${not_success}
     Sleep                               3s
+
+
 
 
     

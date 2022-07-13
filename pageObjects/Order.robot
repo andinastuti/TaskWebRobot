@@ -12,11 +12,11 @@ Open Browser Chrome
 Verify Current Url Is Contact Url
     [Documentation]                     Verify current url is order url
     Location Should Be                  ${ORDER_URL}
-    sleep                               5s
+    sleep                               10s
 
 Klik Add to cart
     Click Element                       ${add_blue}
-    sleep                               5s
+    sleep                               10s
 
 Success add to shopping cart
     Element Should Be Visible           ${add_green}
@@ -51,6 +51,16 @@ Address page is appear
 
 Click Checkout Address
     Click Element                       ${checkout_address}
+
+Shipping page is appear
+    Element Should Be Visible           ${shipping_page}
+    sleep                               10s
+
+Checklist therm of services
+    Click Element                       ${checklist}
+
+Click Checkout Shipping
+    Click Element                       ${checkout_shipping}
 
 
     

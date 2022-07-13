@@ -10,7 +10,7 @@ User Should Be Able to Register
 
 
     Verify Current Url Is Homepage Url
-    input email                             email=fadlilandina@gmail.com
+    input email                             email=fadlil2@gmail.com
     Verify register page                          
     choose title
     input first name

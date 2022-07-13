@@ -20,7 +20,10 @@ User Should Be Able to order product
     Klik Sign in
     Address page is appear
     Click Checkout Address
-    
+    #Shipping page is appear                             
+    #Checklist therm of services
+    #Click Element                 
+    #Click Checkout Shipping
 
 
     [Teardown]                          Close Browser
